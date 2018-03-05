@@ -1,2 +1,2 @@
-- [关于](README.md)
-- [部署](./doc/deploy.md)
+- [API概述](README.md)
+- [人脸检测和分析](./doc/deploy.md)

@@ -1,23 +1,21 @@
-# 部署
+# 人脸检测
 
-## 环境搭建
+> `/face/tool/detect`
 
-可使用国内镜像 `https://npm.taobao.org/`
+### 描述
 
-```
-# 安装全局 gitbook，root 用户执行
-npm install gitbook-cli -g
-# 安装本地模块
-npm install
-# 安装 gitbook 模块
-gitbook install
-```
+检测给定图片中的所有人脸位置，图片的上传可采用本地上传图片(base64)或让服务器从网络地址抓取的方式(url)
+图片必须满足如下条件：
 
-## 更新文档
+ 1. 格式必须为 JPG，BMP，PNG之一
+ 2. 宽度大于24像素小于6000像素，高度大于24像素小于4000像素
+ 3. 文件尺寸小于等于20MB
 
-```
-git pull
-gitbook build
-rm -rf _book_cache
-cp -r _book _book_cache
-```
+### 参数
+
+Name | 参数名 | 参数说明 
+- | :-: | -: 
+必须  | app_id | APP账户
+    | app_secret | APP密钥
+    | url 或 img[POST]|通过POST方法上传的待检测图片的URL或者二进制数据的Base64编码，原始图片大小需要小于20M
+可选|mode| 是否返回每张人脸图片true表示返回，false表示不返回
