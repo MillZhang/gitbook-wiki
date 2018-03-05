@@ -1,2 +1,3 @@
-# gitbook-wiki
-基于gitbook的在线wiki搭建
+# 关于
+
+字条网 -- 文档展示平台，文档内容托管于 GitHub。
